@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Page d'accueil</title>
+	</head>
+	<body>
+		<main class="main" id="main">
+			<nav>
+				<a href="#" class="logo">Phone'S</a>
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Véhicules</a></li>
+					<li><a href="#">Galerie</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="info">
+				<div class="overlay"></div>
+				<img src="images/phone.png" class="phone" alt="" />
+				<div id="circle">
+					<div class="feature camera">
+						<img src="images/aperture.png" alt="" />
+						<div>
+							<h1>Camera</h1>
+							<p>64MP Rear Ultra Pro, 32MP Front</p>
+						</div>
+					</div>
+					<div class="feature processor">
+						<img src="images/processor.png" alt="" />
+
+						<div>
+							<h1>Processeur</h1>
+							<p>Snapdragon 888 Octa-core 8nm</p>
+						</div>
+					</div>
+					<div class="feature display">
+						<img src="images/display.png" alt="" />
+						<div>
+							<h1>Ecran</h1>
+							<p>6.7" Amoled Full Screen</p>
+						</div>
+					</div>
+					<div class="feature weight">
+						<img src="images/weight.png" alt="" />
+						<div>
+							<h1>Poids</h1>
+							<p>189g ~+ 10g</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="controls">
+				<img src="images/down-arrow.png" id="arrowUp" alt="" />
+				<h4>Caractéristiques</h4>
+				<img src="images/down-arrow.png" id="arrowDown" alt="" />
+			</div>
+		</main>
+
+		<script>
+			const circle = document.getElementById('circle');
+			const btnUp = document.getElementById('arrowUp');
+			const btnDown = document.getElementById('arrowDown');
+			let currentRotateValue = circle.style.transform;
+			let clickRotateSum;
+
+			btnUp.onclick = () => {
+				clickRotateSum = currentRotateValue + 'rotate(-90deg)';
+				circle.style.transform = clickRotateSum;
+				currentRotateValue = clickRotateSum;
+			};
+
+			btnDown.onclick = () => {
+				clickRotateSum = currentRotateValue + 'rotate(90deg)';
+				circle.style.transform = clickRotateSum;
+				currentRotateValue = clickRotateSum;
+			};
+		</script>
+	</body>
+</html>

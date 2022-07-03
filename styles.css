@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Tw Cen MT', sans-serif;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(to left top, rgb(183, 235, 86), #6bffd3 65%);
+	overflow: hidden;
+}
+
+nav {
+	position: sticky;
+	width: 85%;
+	margin: 20px auto;
+	display: flex;
+	align-items: center;
+	z-index: 1000;
+}
+
+nav .logo {
+	flex-basis: 20%;
+	cursor: pointer;
+	font-size: 2.5rem;
+	font-style: oblique;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+	align-items: center;
+	padding-right: 40px;
+	text-align: right;
+	list-style-type: none;
+}
+
+ul li {
+	margin-right: 10px;
+}
+
+ul li a {
+	position: relative;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.info {
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	width: 800px;
+	height: 800px;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+
+.phone {
+	position: absolute;
+	z-index: 1;
+	width: 300px;
+	top: 50%;
+	left: calc(50% - 150px);
+	transform: translateY(-50%);
+}
+
+#circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+.feature {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: 200px;
+}
+
+.feature div {
+	margin-left: 20px;
+}
+
+.feature div h1 {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.feature p {
+	font-size: 14px;
+}
+
+.feature img {
+	width: 40px;
+}
+
+.camera {
+	top: 370px;
+	right: 50px;
+}
+
+.processor {
+	top: 120px;
+	left: 300px;
+	transform: rotate(-90deg);
+}
+
+.display {
+	bottom: 360px;
+	left: 50px;
+	transform: rotate(180deg);
+}
+
+.weight {
+	bottom: 130px;
+	left: 300px;
+	transform: rotate(-270deg);
+}
+
+.controls {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transform: translateY(-50%);
+}
+
+.controls h3 {
+	color: #fff;
+	margin: 15px 0;
+}
+
+.controls img {
+	position: relative;
+	width: 25px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.controls img:hover {
+	background: rgb(0 0 0 /15%);
+}
+
+.controls #arrowUp {
+	transform: rotate(180deg);
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 400px solid rgb(7, 7, 10);
+	border-bottom: 400px solid rgb(7, 7, 10);
+	border-left: 400px solid rgb(7, 7, 10);
+	border-right: 400px solid transparent;
+	z-index: 1;
+}
